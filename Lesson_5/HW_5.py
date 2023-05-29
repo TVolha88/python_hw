@@ -57,3 +57,6 @@ while attempts > 0:
 # вывод правильной комбинации в случае неудачи
 if attempts == 0:
     print("Вы проиграли. Правильная комбинация: {} {}".format(number, color_str))
+
+
+
