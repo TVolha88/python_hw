@@ -23,8 +23,37 @@ while attempt <= 5:
         break
     else:
         num != skynet_number and color != skynet_color
-        print("You lose! The number is {} and the color is {}.".format(skynet_number, format(skynet_color)))
+        print("You lose! The number is {} and the color is {}.".format(skynet_number, skynet_color))
 
+import random
 
+# генерация случайного числа и цвета
+number = random.randint(1, 10)
+color = random.randint(1, 2)
 
+# присвоение цвету соответствующей строки
+if color == 1:
+    color_str = "красный"
+else:
+    color_str = "черный"
 
+# количество попыток
+attempts = 5
+
+# цикл для попыток угадать
+while attempts > 0:
+    # ввод числа и цвета пользователем
+    user_number = int(input("Введите число от 1 до 10: "))
+    user_color = input("Введите цвет (красный или черный): ")
+
+    # проверка правильности ответа
+    if user_number == number and user_color == color_str:
+        print("Вы угадали!")
+        break
+    else:
+        print("Неправильно. Попробуйте еще раз.")
+        attempts -= 1
+
+# вывод правильной комбинации в случае неудачи
+if attempts == 0:
+    print("Вы проиграли. Правильная комбинация: {} {}".format(number, color_str))
