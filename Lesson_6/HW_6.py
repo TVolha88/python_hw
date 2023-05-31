@@ -1,39 +1,40 @@
 # # 1. Ȃеремножить все нечётные значения в диапазоне от 1 до 30.
 #
-# pr = 1
-# for i in range(1, 31):
-#     if i % 2 != 0:
-#         pr *= i
-# print(pr)
-# print('=' * 35)
+pr = 1
+for i in range(1, 31):
+    if i % 2 != 0:
+        pr *= i
+print(pr)
+print('=' * 35)
 #
 # # 2. Записать в массив все числа в диапазоне от 1 до 100 кратные 5.
 #
-# arr = []
-# for i in range(1, 101):
-#     if i % 5 == 0:
-#         arr.append(i)
-# print(arr)
-# print('=' * 35)
+arr = []
+for i in range(1, 101):
+    if i % 5 == 0:
+        arr.append(i)
+print(arr)
+print('=' * 35)
 #
 # # 3. Вывести на экран все чётные значения в диапазоне от 1 до 71.
 #
-# for i in range(1, 72):
-#     if i % 2 == 0:
-#         print(i, end=' ')
-# print(sep='\n')
-# print('=' * 35)
+for i in range(1, 72):
+    if i % 2 == 0:
+        print(i, end=' ')
+print(sep='\n')
+print('=' * 35)
 #
 # # 4. Дан массив чисел. Если число встречается более двух раз, то добавить
 # # его в новый массив.
 #
-# arr = [1, 6, 8, 345, 679, 1, 4, 5, 3, 6, 7, 9, 3, 9, 3, 4, 6, 6, 7, 8, 10]
-# new_arr = []
-# for i in arr:
-#     if arr.count(i) >= 2:
-#         new_arr.append(i)
-# print(new_arr)
+arr = [1, 6, 8, 345, 679, 1, 4, 5, 3, 6, 7, 9, 3, 9, 3, 4, 6, 6, 7, 8, 10]
+new_arr = []
+for i in arr:
+    if arr.count(i) >= 2:
+        new_arr.append(i)
+print(new_arr)
 #
+# ************************************************************************************************
 # ЗАДАЧИ ИЗ ПРЕЗЕНТАЦИИ ПО ЦИКЛУ FOR (переделала на while)
 
 # Ȃользователь вводит строку и один символ. Ȃрограмма должна
@@ -41,100 +42,191 @@
 # Ȁапример: «Я учу программирование» символ «о»
 # ȃезультат «Я учу прграммирвание»..
 
-# str = input("Enter the string: ")
-#
-# symbol = input("Enter the symbol to delete: ")
-#
-# new_str = ""
-#
-# i = 0
-# while i < len(str):
-#     if str[i] != symbol:
-#         new_str += str[i]
-#     i += 1
-#
-# print(new_str)
+str = input("Enter the string: ")
+
+symbol = input("Enter the symbol to delete: ")
+
+new_str = ""
+
+i = 0
+while i < len(str):
+    if str[i] != symbol:
+        new_str += str[i]
+    i += 1
+
+print(new_str)
 #
 #
 # Вывести все трехзначные числа, которые делятся на 100 без
 # остатка.
 
-# i = 100
-# while i < 1000:
-#     if i % 100 == 0:
-#         print(i, end=" ")
-#     i += 1
+i = 100
+while i < 1000:
+    if i % 100 == 0:
+        print(i, end=" ")
+    i += 1
 
 # Вывести на экран все числа в диапазоне от 94 до 350 кратные 5.
-#
-# i = 94
-# while i < 351:
-#     if i % 5 == 0:
-#         print(i, end=" ")
-#     i += 1
+
+i = 94
+while i < 351:
+    if i % 5 == 0:
+        print(i, end=" ")
+    i += 1
 
 # Дан массив из 7 цифр. Если четных цифр в нем больше чем
 # нечетных, то найти сумму всех цифр массива, если нечетных
 # больше, то найти произведение 1, 3, 6 элементов
 
 
-# arr = [1, 2, 3, 4, 5, 6, 7]
-# even = 0
-# odd = 0
-# i = 0
-# while i < len(arr):
-#     if arr[i] % 2 == 0:
-#         even += 1
-#     else:
-#         odd += 1
-#     i += 1
-#
-# if even > odd:
-#     print(sum(arr))
-# else:
-#     print(arr[0] * arr[2] * arr[5])
+arr = [1, 2, 3, 4, 5, 6, 7]
+even = 0
+odd = 0
+i = 0
+
+while i < len(arr):
+    if arr[i] % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+    i += 1
+
+if even > odd:
+    print(sum(arr))
+else:
+    print(arr[0] * arr[2] * arr[5])
 
 # Дан массив чисел. Ȁайти их сумму и произведение.
 
-# arr = [1, 2, 3, 4, 5, 6, 7]
-# sum = 0
-# pr = 1
-# i = 0
-# while i < len(arr):
-#     sum += arr[i]
-#     pr *= arr[i]
-#     i += 1
-# print(sum)
-# print(pr)
+arr = [1, 2, 3, 4, 5, 6, 7]
+sum = 0
+pr = 1
+i = 0
+
+while i < len(arr):
+    sum += arr[i]
+    pr *= arr[i]
+    i += 1
+print(sum)
+print(pr)
 
 
 # Ȁаписать таблицу умножения от 1 до 9.
-# i = 1
-# while i < 10:
-#     j = 1
-#     while j < 10:
-#         print(i*j, ' ', end=' ')
-#         j += 1
-#     i += 1
-#     print()
 
+i = 1
+
+while i < 10:
+    j = 1
+    while j < 10:
+        print(i*j, ' ', end=' ')
+        j += 1
+    i += 1
+    print()
+#
+# ************************************************************************************************
 # ЗАДАЧИ ИЗ ПРЕЗЕНТАЦИИ ПО ЦИКЛУ WHILE (переделала на for)
 
 # Квадраты всех целых чисел от 1 до 10.
-#
-# for i in range(1,11):
-#     i = i ** 2
-#     print(i, end=' ')
+
+for i in range(1,11):
+    i = i ** 2
+    print(i, end=' ')
 
 # Ȃеремножить все чётные значения в диапазоне от 0 до 125;
 # результат вывести на экран.
-# i = 1
-# result = 0
-# for i in range(0, 126):
-#     if i % 2 == 0:
-#         result = i*i
-#     i += 1
-# print(result)
+
+i = 1
+result = 0
+
+for i in range(0, 126):
+    if i % 2 == 0:
+        result = i*i
+    i += 1
+print(result)
 
 # Вывести числа от 1 до 15 в порядке убывания
 
+for i in range(15, 0, -1):
+    print(i)
+
+# Ȃользователь вводит два числа c клавиатуры, необходимо
+# вывести на экран все отрицательные числа, лежащие между
+# ними. Ȁапример пользователь ввел -5 и 3, на экране вывелось
+# -4, -3, -2, -1
+
+a = int(input("Enter the 1 number:"))
+b = int(input("Enter the 2 number:"))
+
+for i in range(a, b):
+    i += 1
+    if i >= 0:
+        break
+    print(i)
+
+# Задание No5
+#
+# Ȁеобходимо, чтоб программа выводила на экран вот такую
+# последовательность(не использовать готовый массив):
+#
+# 7 14 21 28 35 42 49 56 63 70 77 84 91 98
+#
+# Добавить в массив и найти его длину.
+
+arr = []
+i = 0
+
+for i in range(0, 98, 7):
+    arr.append(i)
+
+print(arr, len(arr))
+
+# Задание No6
+#
+# Ȃростейший калькулятор c введёнными двумя числами вещественного типа.
+# Ввод с клавиатуры: операции + - * / и два числа.
+# ȁбработать ошибку: “Деление на ноль”
+# Ȁоль использовать в качестве завершения программы (сделать как отдельную
+# операцию).
+
+
+for i in range(5):
+    operation = input("Enter the operation (+, -, *, /) or 0 to exit: ")
+    if operation == "0":
+        break
+
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    if operation == "+":
+        print(num1 + num2)
+    elif operation == "-":
+        print(num1 - num2)
+    elif operation == "*":
+        print(num1 * num2)
+    elif operation == "/":
+        print(num1 / num2)
+    elif operation == "/" and num2 == 0:
+        print("ZeroDivisionError")
+    else:
+        print("Error")
+
+# Задание No7
+#
+# ǿассив из 7 цифр. Если четных цифр в нем больше чем
+# нечетных, то найти сумму всех его цифр, если нечетных
+# больше, то найти произведение 1 3 и 6 элемента.
+
+even = 0
+odd = 0
+arr = [1, 2, 3, 4, 5, 6, 7]
+
+for i in arr:
+    if i % 2 == 0:
+        even += i
+    else:
+        odd += i
+
+if even > odd:
+    print(sum(arr))
+else:
+    print(arr[1] * arr[3] * arr[6])
