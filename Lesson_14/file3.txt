@@ -1,0 +1,7 @@
+hello
+world
+python
+2
+11
+17
+101
