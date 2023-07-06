@@ -34,7 +34,6 @@ with open("purchases.json", 'r', encoding='utf-8') as json_file:
 total_cost = 0
 
 for purchase in purchases:
-    '''doc test11'''
     price = int(purchase['price'])
     total_cost += price
 print(f"Total cost: {total_cost}")
